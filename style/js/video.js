@@ -10,7 +10,7 @@ function onYouTubeIframeAPIReady() {
     height: "360",
     width: "640",
     videoId: "hRAj21s6BQQ",
-    playerVars: { autoplay: 0, controls: 0 },
+    playerVars: { autoplay: 0, controls: 1 },
 
     events: {
       onReady: onPlayerReady,
