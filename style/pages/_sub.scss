@@ -1,0 +1,64 @@
+.sub {
+  transform: translateY(50%);
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 64px;
+    padding: 40px 100px;
+    border-radius: 6px;
+    background: #fdfdfd;
+
+    /* shadow block */
+    box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
+  }
+  &__text {
+    max-width: 414px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+  }
+  &__input {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 8px;
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 16px;
+    row-gap: 8px;
+    max-width: 536px;
+
+    &__title {
+      color: #18121e;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 125%;
+      grid-column: span 2;
+    }
+    &__input {
+      border: none;
+      max-width: 280px;
+      width: 100%;
+      padding: 0 16px;
+      border-radius: 4px;
+      background: #f3f5f4;
+    }
+    &__btn {
+      border: none;
+      max-width: 240px;
+      width: 100%;
+    }
+    &__descr {
+      color: #18121e;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 128%;
+    }
+  }
+}
+a.sub__input__descr__link {
+  text-decoration: underline;
+}

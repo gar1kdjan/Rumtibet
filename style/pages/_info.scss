@@ -1,0 +1,103 @@
+.info {
+  &__wrapper {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 120px;
+  }
+  &__media {
+    display: grid;
+
+    &-img {
+      border-radius: 24px;
+      max-width: 350px;
+      height: 400px;
+      width: 100%;
+    }
+    &-block {
+      max-width: 350px;
+      width: 100%;
+      height: 400px;
+      position: absolute;
+      margin: 126px 0 0 130px;
+      &-img {
+        position: absolute;
+      }
+      &-circle {
+        position: absolute !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px; /* задайте ширину круга */
+        height: 50px; /* задайте высоту круга */
+        border-radius: 100px;
+        background: rgba(253, 253, 253, 0.6); /* задайте цвет фона круга */
+        transition: transform 0.3s ease-in-out; /* Добавляем анимацию transform */
+        cursor: pointer; /* Делаем указатель при наведении */
+
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          fill: #1a3e3e; // Цвет заливки для SVG
+        }
+
+        &:hover {
+          transform: translate(-50%, -50%) scale(1.1); /* Увеличиваем элемент при наведении в 1.1 раза */
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    padding-top: 64px;
+    max-width: 540px;
+    width: 100%;
+  }
+  &__btn {
+    max-width: 202px;
+  }
+}
+
+#videoFrame {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 66, 66, 0.8); /* Цвет подложки с прозрачностью */
+  z-index: 9998; /* Устанавливаем z-index чуть ниже чем у videoFrame */
+}
+
+.video-frame {
+  width: 841px;
+  height: 473px;
+  background-color: #1e4242;
+  position: relative;
+}
+
+#videoFrame iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}

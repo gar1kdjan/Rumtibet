@@ -1,0 +1,22 @@
+.copyright {
+  padding: 20px 0;
+  background: #18121e;
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    &__title,
+    &__descr {
+      color: #fff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18px; /* 128.571% */
+    }
+
+    &__descr {
+      text-decoration-line: underline;
+    }
+  }
+}
