@@ -7,6 +7,10 @@
     display: grid;
     grid-template-columns: repeat(2, max-content);
     column-gap: 90px;
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 25px;
+    }
   }
   &__container {
     &-title {
@@ -47,6 +51,10 @@
     display: grid;
     grid-template-rows: repeat(4, max-content);
     row-gap: 40px;
+    @media (max-width: $lg) {
+      margin-top: 20px;
+      row-gap: 20px;
+    }
   }
   &__box {
     display: grid;
@@ -59,6 +67,9 @@
     display: grid;
     grid-row: repeat(2, max-content);
     row-gap: 4px;
+    @media (max-width: $lg) {
+      max-width: 450px;
+    }
 
     &-title {
       color: #18121e;

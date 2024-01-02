@@ -4,6 +4,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 120px;
+    @media (max-width: $lg) {
+      margin-top: 50px;
+    }
   }
   &__media {
     display: grid;
@@ -13,6 +16,11 @@
       max-width: 350px;
       height: 400px;
       width: 100%;
+      object-fit: cover;
+      @media (max-width: $lg) {
+        max-width: 300px;
+        height: 350px;
+      }
     }
     &-block {
       max-width: 350px;
@@ -22,18 +30,22 @@
       margin: 126px 0 0 130px;
       &-img {
         position: absolute;
+        @media (max-width: $lg) {
+          max-width: 300px;
+          height: 350px;
+        }
       }
       &-circle {
         position: absolute !important;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 50px; /* задайте ширину круга */
-        height: 50px; /* задайте высоту круга */
+        width: 50px;
+        height: 50px;
         border-radius: 100px;
-        background: rgba(253, 253, 253, 0.6); /* задайте цвет фона круга */
-        transition: transform 0.3s ease-in-out; /* Добавляем анимацию transform */
-        cursor: pointer; /* Делаем указатель при наведении */
+        background: rgba(253, 253, 253, 0.6);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
 
         svg {
           position: absolute;
@@ -56,6 +68,10 @@
     padding-top: 64px;
     max-width: 540px;
     width: 100%;
+    @media (max-width: $lg) {
+      max-width: 353px;
+      padding-top: 0;
+    }
   }
   &__btn {
     max-width: 202px;

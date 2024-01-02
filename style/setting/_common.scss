@@ -1,22 +1,26 @@
 @import "../setting/sizes";
 
 .container {
-  // width: 60%;
-  width: 1180px;
+  max-width: 1180px;
+  width: 100%;
   margin: 0 auto;
+  @media (max-width: $lg) {
+    max-width: 900px;
+  }
 }
 
-// .main,
-// .catalog,
-// .new__wrapper,
-// .team,
-// .footer {
-//   display: none;
-// }
+.main,
+.info,
+.offers,
+.directions,
+.blog,
+.gallery,
+.sub,
+.footer,
+.copyright {
+  display: none;
+}
 
-// .main,
-// .catalog,
-// .new__wrapper,
-// .team {
-//   display: block;
-// }
+.main {
+  display: block;
+}

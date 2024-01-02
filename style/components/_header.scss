@@ -1,3 +1,7 @@
+@import "../setting/sizes";
+.open {
+  display: flex !important;
+}
 .header {
   padding-top: 16px;
   display: grid;
@@ -6,16 +10,23 @@
   justify-content: space-between;
 
   &__menu {
-    justify-content: space-between;
+    align-items: baseline;
     display: grid;
     grid-template-columns: repeat(2, max-content);
     gap: 50px;
+    @media (max-width: $lg) {
+      gap: 25px;
+    }
   }
   &__nav {
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(5, max-content);
-    gap: 24px;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(5, max-content);
+      gap: 24px;
+      // width: 100%;
+      // display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item {
@@ -33,5 +44,8 @@
   &__btn {
     max-width: 157px;
     width: 100%;
+    @media (max-width: $lg) {
+      display: none;
+    }
   }
 }

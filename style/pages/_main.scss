@@ -1,14 +1,15 @@
+@import "../setting/sizes";
 .main {
   background-image: url("./img/jpg/bg/1.jpg");
   background-repeat: no-repeat;
   max-width: 1920px;
   width: 100%;
   height: 100vh;
-
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
+
   &__content {
     position: absolute;
     bottom: 0;
@@ -19,13 +20,15 @@
 
   &__title {
     font-family: NEXT ART;
-    // margin-top: 463px;
     text-transform: uppercase;
     color: #fdfdfd;
     font-size: 50px;
     font-style: normal;
-    line-height: 150%; /* 75px */
+    line-height: 150%;
     letter-spacing: 1px;
     margin-bottom: 2%;
+    @media (max-width: $lg) {
+      font-size: 48px;
+    }
   }
 }
