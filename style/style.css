@@ -122,7 +122,8 @@ a:active {
 }
 @media (max-width: 991px) {
   .container {
-    max-width: 900px;
+    max-width: 991px;
+    padding: 0 10px;
   }
 }
 
@@ -167,7 +168,7 @@ a:active {
 }
 @media (max-width: 991px) {
   .header__menu {
-    gap: 25px;
+    display: block;
   }
 }
 .header__nav ul {
@@ -208,25 +209,50 @@ a:active {
           backdrop-filter: blur(3px);
   max-width: 1180px;
   width: 100%;
-  height: 161px;
+  height: auto;
   padding: 40px 43px;
 }
 @media (max-width: 991px) {
   .select {
-    display: grid;
-    grid-template-columns: repeat(4, max-content);
-    padding: 20px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
   }
 }
-.select__block {
+.select__container {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  max-width: 270px;
+}
+@media (max-width: 991px) {
+  .select__container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .select__location, .select__data__wrapper {
+    max-width: 50%;
+  }
+}
+@media (max-width: 991px) {
+  .select__participants {
+    max-width: 70%;
+  }
+}
+@media (max-width: 991px) {
+  .select__btn {
+    max-width: 30%;
+  }
 }
 .select__input {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   gap: 8px;
   padding: 0 16px;
+  height: 52px;
   border-radius: 8px;
   border: 1px solid var(--wl-primary-primary-300, #e1e3e4);
   color: #fdfdfd;
@@ -238,7 +264,7 @@ a:active {
   background: none;
   outline: none;
 }
-.select__name {
+.select__input__name {
   max-width: 210px;
   width: 100%;
   white-space: nowrap;
@@ -249,6 +275,11 @@ a:active {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
+}
+@media (max-width: 991px) {
+  .select__data {
+    justify-content: space-around;
+  }
 }
 .select__data-input {
   color: #fdfdfd;
@@ -264,12 +295,6 @@ a:active {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 21px */
-}
-
-.select__wrapper {
-  display: grid;
-  width: 100%;
-  max-width: 270px;
 }
 
 .select__input,
@@ -289,27 +314,30 @@ li.select__input i {
   font-size: 31px;
   transition: transform 0.3s linear;
 }
-.select__wrapper.active .select__input i,
-.select__wrapper.active li i {
+.select__location.active .select__input i, .select__participants.active .select__input i,
+.select__location.active li i,
+.select__participants.active li i {
   transform: rotate(180deg);
 }
 
 .content {
   max-width: 270px;
   width: 100%;
-  margin-top: 37px;
+  margin-top: 46px;
   position: absolute;
   display: none;
   background: #fdfdfd;
   border: 1px solid #ddd;
 }
 @media (max-width: 991px) {
-  .content {
-    max-width: 212px;
-    margin-top: 56px;
+  .select__location .content {
+    max-width: 433px;
+  }
+  .select__participants .content {
+    max-width: 609px;
   }
 }
-.select__wrapper.active .content {
+.select__location.active .content, .select__participants.active .content {
   display: block;
 }
 .content .search {
@@ -347,7 +375,8 @@ li.select__input i {
   color: #fdfdfd;
 }
 
-.select__wrapper .options li:first-child {
+.select__location .options li:first-child,
+.select__participants .options li:first-child {
   background: #112929;
 }
 
@@ -556,21 +585,32 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .main {
   background-image: url("./img/jpg/bg/1.jpg");
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
   max-width: 1920px;
   width: 100%;
-  height: 100vh;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 991px) {
+  .main {
+    max-width: 991px;
+    height: auto;
+  }
+}
 .main__content {
-  position: absolute;
+  padding: 416px 0 82px;
   bottom: 0;
   left: 0;
   right: 0;
-  margin-bottom: 2%;
+}
+@media (max-width: 991px) {
+  .main__content {
+    padding: 300px 0 62px;
+  }
 }
 .main__title {
   font-family: NEXT ART;
@@ -580,12 +620,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-style: normal;
   line-height: 150%;
   letter-spacing: 1px;
-  margin-bottom: 2%;
-}
-@media (max-width: 991px) {
-  .main__title {
-    font-size: 48px;
-  }
+  margin-bottom: 41px;
 }
 
 .info__wrapper {

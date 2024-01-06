@@ -15,7 +15,7 @@
     grid-template-columns: repeat(2, max-content);
     gap: 50px;
     @media (max-width: $lg) {
-      gap: 25px;
+      display: block;
     }
   }
   &__nav {

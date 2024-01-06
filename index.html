@@ -87,7 +87,7 @@
           </h1>
           <!-- //Выбор локации-->
           <div class="select">
-            <div class="select__wrapper">
+            <div class="select__container select__location">
               <div class="select__input">
                 <span class="select__name">Локация для тура</span>
                 <i class="uil uil-angle-down"></i>
@@ -98,7 +98,7 @@
               <span class="select__title">выберите из списка</span>
             </div>
             <!-- //Выбор даты -->
-            <div class="select__block">
+            <div class="select__container select__data__wrapper">
               <div class="select__data">
                 <input
                   type="date"
@@ -115,13 +115,12 @@
                   value=""
                 />
               </div>
-
               <label class="select__title" for="arrivalDate"
                 >укажите диапазон</label
               >
             </div>
             <!-- //Выбор участников -->
-            <div class="select__wrapper participants">
+            <div class="select__container select__participants">
               <div class="select__input">
                 <span class="select__name">Участники</span>
                 <i class="uil uil-angle-down"></i>
@@ -131,7 +130,6 @@
               </div>
               <span class="select__title">выберите из списка</span>
             </div>
-
             <button class="select__btn" onclick="submitSelection()">
               Найти программу
             </button>
