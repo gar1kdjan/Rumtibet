@@ -127,22 +127,6 @@ a:active {
   }
 }
 
-.main,
-.info,
-.offers,
-.directions,
-.blog,
-.gallery,
-.sub,
-.footer,
-.copyright {
-  display: none;
-}
-
-.main {
-  display: block;
-}
-
 @font-face {
   font-family: "NEXT ART";
   src: local("NEXT ART Bold"), local("NEXTART-Bold"), url("/style/fonts/Nextart.woff") format("woff");
