@@ -581,7 +581,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 @media (max-width: 991px) {
   .main {
-    max-width: 991px;
+    max-width: 989px;
     height: auto;
   }
 }
