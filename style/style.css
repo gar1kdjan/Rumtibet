@@ -736,6 +736,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-top: 100px;
   background: #f3f5f4;
 }
+@media (max-width: 991px) {
+  .offers {
+    margin-top: 0;
+  }
+}
 .offers__wrapper {
   padding-top: 80px;
   padding-bottom: 100px;
@@ -746,9 +751,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 @media (max-width: 991px) {
   .offers__wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 25px;
-         column-gap: 25px;
+    margin-top: 0;
+    padding: 75px 0;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
   }
 }
 .offers__container-title {
@@ -761,11 +767,19 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 100%;
 }
 .offers__container-img {
-  height: 510px;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
+}
+@media (max-width: 991px) {
+  .offers__container-img {
+    justify-content: center;
+    width: 375px;
+    grid-template-columns: unset;
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
 .offers__container-itm {
   max-width: 250px;
@@ -773,6 +787,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 991px) {
+  .offers__container-itm {
+    max-width: 150px;
+    height: 150px;
+  }
 }
 .offers__container-itm:nth-child(1), .offers__container-itm:nth-child(4) {
   border-radius: 0px 50px;
@@ -786,12 +806,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   grid-template-rows: repeat(4, max-content);
   row-gap: 40px;
 }
-@media (max-width: 991px) {
-  .offers__block {
-    margin-top: 20px;
-    row-gap: 20px;
-  }
-}
 .offers__box {
   display: grid;
   grid-template-columns: repeat(2, max-content);
@@ -804,11 +818,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: grid;
   grid-row: repeat(2, max-content);
   row-gap: 4px;
-}
-@media (max-width: 991px) {
-  .offers__content {
-    max-width: 450px;
-  }
 }
 .offers__content-title {
   color: #18121e;
