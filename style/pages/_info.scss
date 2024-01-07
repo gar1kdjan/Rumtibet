@@ -5,22 +5,30 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 120px;
     @media (max-width: $lg) {
-      margin-top: 50px;
+      margin-top: 0;
+      padding: 75px 0 201px 0;
+
+      grid-template-columns: unset;
+      grid-template-rows: repeat(2, max-content);
+      gap: 40px;
+
+      align-items: center;
+      justify-items: center;
     }
   }
   &__media {
+    max-width: 350px;
+    width: 100%;
     display: grid;
-
+    @media (max-width: $lg) {
+      order: 2;
+    }
     &-img {
       border-radius: 24px;
       max-width: 350px;
       height: 400px;
       width: 100%;
       object-fit: cover;
-      @media (max-width: $lg) {
-        max-width: 300px;
-        height: 350px;
-      }
     }
     &-block {
       max-width: 350px;
@@ -30,10 +38,6 @@
       margin: 126px 0 0 130px;
       &-img {
         position: absolute;
-        @media (max-width: $lg) {
-          max-width: 300px;
-          height: 350px;
-        }
       }
       &-circle {
         position: absolute !important;
@@ -69,8 +73,9 @@
     max-width: 540px;
     width: 100%;
     @media (max-width: $lg) {
-      max-width: 353px;
+      max-width: 580px;
       padding-top: 0;
+      order: 1;
     }
   }
   &__btn {
