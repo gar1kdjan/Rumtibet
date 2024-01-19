@@ -2,6 +2,9 @@
   background: #f3f5f4;
   padding-top: 80px;
   padding-bottom: 100px;
+  @media (max-width: $lg) {
+    padding: 75px 0;
+  }
 
   &__wrapper {
     margin: 40px 0 50px 0;
@@ -10,21 +13,28 @@
     grid-template-rows: repeat(2, max-content);
     column-gap: 20px;
     row-gap: 24px;
+    @media (max-width: $lg) {
+      grid-template-columns: unset;
+      grid-template-rows: repeat(4, 1fr);
+    }
   }
 
   &__card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 230px 1fr;
     max-width: 580px;
     gap: 24px;
     width: 100%;
-    height: 312px;
+    // height: 312px;
     padding: 16px;
     border-radius: 10px;
     background: #fdfdfd;
+
+    @media (max-width: $lg) {
+      max-width: none;
+    }
     &__itm {
-      max-width: 230px;
-      width: 100%;
+      width: 230px;
       height: 280px;
       object-fit: cover;
       overflow: hidden;
@@ -38,6 +48,9 @@
       max-width: 294px;
       width: 100%;
       padding: 16px 0px;
+      @media (max-width: $lg) {
+        max-width: 600px;
+      }
     }
 
     &__link {

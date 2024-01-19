@@ -8,7 +8,10 @@
   max-width: 1920px;
   width: 100%;
   @media (max-width: $lg) {
-    max-width: 989px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-image: url("./img/jpg/bg/2.jpg");
+
     height: auto;
   }
 

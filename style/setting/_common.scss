@@ -5,7 +5,6 @@
   width: 100%;
   margin: 0 auto;
   @media (max-width: $lg) {
-    max-width: 991px;
     padding: 0 10px;
   }
 }
@@ -23,6 +22,9 @@
 // }
 
 // .main,
-// .info {
+// .info,
+// .offers,
+// .directions,
+// .blog {
 //   display: block;
 // }
