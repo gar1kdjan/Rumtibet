@@ -13,35 +13,56 @@
       position: relative;
       overflow: hidden;
       height: 250px;
+      @media (max-width: $lg) {
+        height: 209px;
+      }
 
       &:nth-child(1) {
         grid-area: a;
         width: 580px;
+        @media (max-width: $lg) {
+          width: 475px;
+        }
       }
 
       &:nth-child(2) {
         grid-area: b;
         width: 280px;
+        @media (max-width: $lg) {
+          width: 227px;
+        }
       }
 
       &:nth-child(3) {
         grid-area: c;
         width: 280px;
+        @media (max-width: $lg) {
+          width: 227px;
+        }
       }
 
       &:nth-child(4) {
         grid-area: d;
         width: 280px;
+        @media (max-width: $lg) {
+          width: 227px;
+        }
       }
 
       &:nth-child(5) {
         grid-area: e;
         width: 580px;
+        @media (max-width: $lg) {
+          width: 475px;
+        }
       }
 
       &:nth-child(6) {
         grid-area: f;
         width: 280px;
+        @media (max-width: $lg) {
+          width: 227px;
+        }
       }
 
       &::before {
@@ -85,4 +106,8 @@
       transition: opacity 0.3s, transform 0.3s;
     }
   }
+}
+
+.fancybox-image {
+  padding-top: 100px;
 }

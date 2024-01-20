@@ -126,6 +126,30 @@ a:active {
   }
 }
 
+.main,
+.info,
+.offers,
+.directions,
+.blog,
+.gallery,
+.sub,
+.footer,
+.copyright {
+  display: none;
+}
+
+.main,
+.info,
+.offers,
+.directions,
+.blog,
+.gallery,
+.sub,
+.footer,
+.copyright {
+  display: block;
+}
+
 @font-face {
   font-family: "NEXT ART";
   src: local("NEXT ART Bold"), local("NEXTART-Bold"), url("/style/fonts/Nextart.woff") format("woff");
@@ -1124,29 +1148,64 @@ input[type=date]::-webkit-calendar-picker-indicator {
   overflow: hidden;
   height: 250px;
 }
+@media (max-width: 992px) {
+  .gallery__grid__link {
+    height: 209px;
+  }
+}
 .gallery__grid__link:nth-child(1) {
   grid-area: a;
   width: 580px;
+}
+@media (max-width: 992px) {
+  .gallery__grid__link:nth-child(1) {
+    width: 475px;
+  }
 }
 .gallery__grid__link:nth-child(2) {
   grid-area: b;
   width: 280px;
 }
+@media (max-width: 992px) {
+  .gallery__grid__link:nth-child(2) {
+    width: 227px;
+  }
+}
 .gallery__grid__link:nth-child(3) {
   grid-area: c;
   width: 280px;
+}
+@media (max-width: 992px) {
+  .gallery__grid__link:nth-child(3) {
+    width: 227px;
+  }
 }
 .gallery__grid__link:nth-child(4) {
   grid-area: d;
   width: 280px;
 }
+@media (max-width: 992px) {
+  .gallery__grid__link:nth-child(4) {
+    width: 227px;
+  }
+}
 .gallery__grid__link:nth-child(5) {
   grid-area: e;
   width: 580px;
 }
+@media (max-width: 992px) {
+  .gallery__grid__link:nth-child(5) {
+    width: 475px;
+  }
+}
 .gallery__grid__link:nth-child(6) {
   grid-area: f;
   width: 280px;
+}
+@media (max-width: 992px) {
+  .gallery__grid__link:nth-child(6) {
+    width: 227px;
+  }
 }
 .gallery__grid__link::before {
   content: "";
@@ -1183,6 +1242,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   transition: opacity 0.3s, transform 0.3s;
 }
 
+.fancybox-image {
+  padding-top: 100px;
+}
+
 .sub {
   transform: translateY(50%);
 }
@@ -1194,14 +1257,27 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 40px 100px;
   border-radius: 6px;
   background: #fdfdfd;
-  /* shadow block */
   box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
+}
+@media (max-width: 992px) {
+  .sub__wrapper {
+    grid-template-columns: unset;
+    grid-template-rows: repeat(2, max-content);
+  }
 }
 .sub__text {
   max-width: 414px;
   width: 100%;
   display: grid;
   grid-template-rows: repeat(2, max-content);
+}
+@media (max-width: 992px) {
+  .sub__text {
+    max-width: none;
+  }
+}
+.sub__text__subtitle {
+  font-size: 18px;
 }
 .sub__input {
   max-width: 543px;
