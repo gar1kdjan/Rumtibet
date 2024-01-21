@@ -10,6 +10,10 @@
     max-width: 456px;
     width: 100%;
     margin-right: 20px;
+    @media (max-width: $lg) {
+      max-width: 312px;
+      margin-right: 50px;
+    }
   }
   &__text {
     &__title {
@@ -28,6 +32,9 @@
       font-style: normal;
       font-weight: 400;
       line-height: 143%;
+      @media (max-width: $lg) {
+        margin-top: 20px;
+      }
     }
   }
   &__contact {
@@ -50,6 +57,9 @@
   }
   &__block {
     margin-right: 120px;
+    @media (max-width: $lg) {
+      margin-right: 50px;
+    }
     &:last-child {
       margin-right: 0px;
     }
