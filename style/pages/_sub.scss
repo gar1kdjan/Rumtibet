@@ -11,6 +11,7 @@
     @media (max-width: $lg) {
       grid-template-columns: unset;
       grid-template-rows: repeat(2, max-content);
+      padding: 40px;
     }
   }
   &__text {
@@ -20,6 +21,9 @@
     grid-template-rows: repeat(2, max-content);
     @media (max-width: $lg) {
       max-width: none;
+      justify-content: center;
+      justify-items: center;
+      margin-bottom: 15px;
     }
     &__subtitle {
       font-size: 18px;
@@ -31,6 +35,16 @@
     display: grid;
     grid-template-rows: repeat(2, max-content);
     row-gap: 8px;
+    @media (max-width: $lg) {
+      max-width: none;
+    }
+    &__descr {
+      color: #18121e;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 128%;
+    }
   }
   &__form {
     display: grid;
@@ -38,6 +52,10 @@
     column-gap: 16px;
     row-gap: 8px;
     max-width: 536px;
+    @media (max-width: $lg) {
+      max-width: none;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     &__title {
       color: #18121e;
@@ -54,18 +72,17 @@
       padding: 0 16px;
       border-radius: 4px;
       background: #f3f5f4;
+      @media (max-width: $lg) {
+        max-width: none;
+      }
     }
     &__btn {
       border: none;
       max-width: 240px;
       width: 100%;
-    }
-    &__descr {
-      color: #18121e;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 128%;
+      @media (max-width: $lg) {
+        max-width: none;
+      }
     }
   }
 }
