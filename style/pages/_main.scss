@@ -7,13 +7,6 @@
 
   max-width: 1920px;
   width: 100%;
-  @media (max-width: $lg) {
-    background-size: cover;
-    background-repeat: no-repeat;
-    // background-image: url("./img/jpg/bg/2.jpg");
-
-    height: auto;
-  }
 
   margin: 0;
   padding: 0;
@@ -39,5 +32,11 @@
     line-height: 150%;
     letter-spacing: 1px;
     margin-bottom: 41px;
+    @media (max-width: $lg) {
+      max-width: 930px;
+    }
+    @media (max-width: $md) {
+      font-size: 38px;
+    }
   }
 }

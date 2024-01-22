@@ -27,6 +27,7 @@
 
 .select__btn {
   max-width: 213px;
+  width: 100%;
   height: 52px;
   display: flex;
   padding: 16px 36px;
@@ -42,6 +43,10 @@
     background: #1a3e3e;
     border: 1px solid #fdfdfd;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  @media (max-width: $lg) {
+    max-width: 30%;
+    width: 100%;
   }
 }
 

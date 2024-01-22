@@ -25,7 +25,10 @@
     @media (max-width: $lg) {
       width: 100%;
       box-sizing: border-box;
-      padding-right: 10px; // Корректировка для промежутка
+      padding-right: 24px;
+      &:nth-child(2) {
+        padding-right: 0;
+      }
     }
   }
   &__location,
@@ -40,11 +43,12 @@
       max-width: 70%;
     }
   }
-  &__btn {
-    @media (max-width: $lg) {
-      max-width: 30%;
-    }
-  }
+  // &__btn {
+  //   @media (max-width: $lg) {
+  //     max-width: 30%;
+  //     width: 100%;
+  //   }
+  // }
 
   &__input {
     display: grid;
@@ -130,13 +134,22 @@ li {
   display: none;
   background: #fdfdfd;
   border: 1px solid #ddd;
-  @media (max-width: 991px) {
+  @media (max-width: $lg) {
     .select__location & {
-      max-width: 433px;
+      max-width: 419px;
     }
 
     .select__participants & {
-      max-width: 609px;
+      max-width: 596px;
+    }
+  }
+  @media (max-width: $md) {
+    .select__location & {
+      max-width: 307px;
+    }
+
+    .select__participants & {
+      max-width: 439px;
     }
   }
 
